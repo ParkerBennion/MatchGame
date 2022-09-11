@@ -6,18 +6,18 @@ using UnityEngine.UI;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TextLabel : MonoBehaviour
 {
-    public TextMeshProUGUI label;
-    public Float_SO dataObj;
+    private TextMeshProUGUI label;
+    public Int_SO dataObj;
 
     private void Start()
     {
         label = GetComponent<TextMeshProUGUI>();
-        label.text = dataObj.floatVal.ToString();
+        label.text = dataObj.intVal.ToString();
         UpdateLabel();
     }
 
     public void UpdateLabel()
     {
-        label.text = dataObj.floatVal.ToString();
+        label.text = dataObj.intVal.ToString();
     }
 }

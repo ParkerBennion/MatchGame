@@ -3,8 +3,11 @@ using UnityEngine;
 public class Int_SO : ScriptableObject
 {
     public int intVal;
-    
 
+    public void resetValue(int num)
+    {
+        intVal = num;
+    }
     public void UpdateVal(int num)
     {
         intVal += num;
