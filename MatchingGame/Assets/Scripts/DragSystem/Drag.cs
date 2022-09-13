@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,11 +6,14 @@ public class Drag : MonoBehaviour
 {
     private Camera cameraObj;
     private bool dragable;
-    private Vector3 position, offset;
+    private Vector3 position, offset, startPosition;
     public UnityEvent startDragEvent, endDragEvent;
+    
     private void Start()
     {
         cameraObj = Camera.main;
+        startPosition = transform.position;
+        Debug.Log(startPosition);
     }
 
     public IEnumerator OnMouseDown()
@@ -34,5 +36,10 @@ public class Drag : MonoBehaviour
     {
         dragable = false;
         endDragEvent.Invoke();
+    }
+
+    public void ReplaceCharacter()
+    {
+        transform.position = startPosition;
     }
 }
