@@ -1,4 +1,7 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
+
 [CreateAssetMenu]
 public class Int_SO : ScriptableObject
 {
@@ -21,5 +24,23 @@ public class Int_SO : ScriptableObject
     {
         intVal *= 2;
     }
+
+    public void SetValue(Int_SO obj)
+    {
+        intVal = obj.intVal;
+    }
+
+    public void CompareValues(Int_SO obj)
+    {
+        if (intVal>obj.intVal)
+        {
+            
+        }
+        else
+        {
+            intVal = obj.intVal;
+        }
+    }
+    
 }
 //same as float value. these could be put in inheritance to be more efficient;
