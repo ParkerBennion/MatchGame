@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97959f7920d04657a89894329110636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 3
+  waitTime: 1
   counterNum: 3
   repeatEvent:
     m_PersistentCalls:
