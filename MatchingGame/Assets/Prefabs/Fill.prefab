@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8117520247845109549}
   - component: {fileID: 5135780915863144006}
   - component: {fileID: 7781427618756807402}
-  - component: {fileID: 4389504080304171442}
-  m_Layer: 7
-  m_Name: Border
+  - component: {fileID: 2668722597376111449}
+  m_Layer: 8
+  m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1438530755, guid: 9ba1d6e7f103b4169a527db61571914b, type: 3}
+  m_Sprite: {fileID: 625129007, guid: 9ba1d6e7f103b4169a527db61571914b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   quitBehaviour:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4389504080304171442
+--- !u!114 &2668722597376111449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,11 +197,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5505484154209816190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572368363d02a46ca87288b8f75de6c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 22d6a016c8a9a444bbc2997e98f0a1db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 0}
-  startEvent:
+  matchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  noMatchEvent:
     m_PersistentCalls:
       m_Calls: []
   colorDatalistObj: {fileID: 11400000, guid: 8a359fa0b20f8478091c3974aa3eb4b9, type: 2}
