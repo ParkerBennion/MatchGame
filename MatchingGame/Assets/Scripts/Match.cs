@@ -21,13 +21,11 @@ public class Match : MonoBehaviour
             if (otherID == idObj)
             {
                 matchEvent.Invoke();
-                Debug.Log("hit");
             }
             else
             {
                 noMatchEvent.Invoke();
                 yield return new WaitForSeconds(0.5f);
-                Debug.Log("wrong");
             }
         }
     }

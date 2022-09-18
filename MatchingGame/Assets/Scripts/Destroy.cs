@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
-    public float seconds = 1;
+    public float seconds = 3;
     private WaitForSeconds waitObj;
 
     private IEnumerator Start()

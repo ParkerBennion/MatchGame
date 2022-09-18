@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,7 +14,6 @@ public class Drag : MonoBehaviour
     {
         cameraObj = Camera.main;
         startPosition = transform.position;
-        Debug.Log(startPosition);
     }
 
     public IEnumerator OnMouseDown()
@@ -32,14 +32,30 @@ public class Drag : MonoBehaviour
         }
     }
 
-    private void OnMouseUp()
+    public void OnMouseUp()
     {
         dragable = false;
         endDragEvent.Invoke();
+        ReplaceCharacter();
     }
 
     public void ReplaceCharacter()
     {
         transform.position = startPosition;
+    }
+
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.position = startPosition;
+
+        }
+
+        if (Input.GetKey(KeyCode.B))
+        {
+            dragable = false;
+        }
+
     }
 }

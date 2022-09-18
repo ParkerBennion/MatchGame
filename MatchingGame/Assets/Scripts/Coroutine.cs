@@ -18,7 +18,12 @@ public class Coroutine : MonoBehaviour
     private void Start()
     {
         wait = new WaitForSeconds(waitTime);
-        StartCourouteneRepeater();
+        startEvent.Invoke();
+    }
+
+    public void InstanceNew()
+    {
+        startEvent.Invoke();
     }
 
     private IEnumerator StartCounter()
@@ -34,7 +39,6 @@ public class Coroutine : MonoBehaviour
                 {
                     textObj.text = "GO!!!";
                 }
-                Debug.Log(counterNum);
                 repeatEvent.Invoke();
                 yield return wait;
             }
@@ -59,6 +63,12 @@ public class Coroutine : MonoBehaviour
             yield return wait;
             repeatUntilFalseEvent.Invoke();
         }
+        endEvent.Invoke();
+    }
+
+    public void SetToFalse()
+    {
+        canRun = false;
     }
     
     

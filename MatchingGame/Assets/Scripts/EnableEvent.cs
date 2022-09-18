@@ -5,7 +5,7 @@ public class EnableEvent : MonoBehaviour
 {
     public UnityEvent OnEnableEvent, onStartEvent;
 
-    public void OnEnable()
+    public void OnCommand()
     {
         OnEnableEvent.Invoke();
     }

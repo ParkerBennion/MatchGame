@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1efe4a44868480ea77be5387063522, type: 3}
   m_Name: V3 B
   m_EditorClassIdentifier: 
-  vectorValue: {x: 0, y: 5, z: 0}
+  vectorValue: {x: 0, y: 12, z: 0}
